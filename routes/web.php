@@ -67,3 +67,6 @@ Auth::routes();
 //Route::post('login', 'AuthController@customLogin');
 //Route::get('/home', 'HomeController@index');
 //Route::get('signout', 'AuthController@signOut');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

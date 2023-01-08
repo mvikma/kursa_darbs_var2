@@ -23,7 +23,7 @@ class User extends Authenticatable
     protected $primaryKey = 'admin_id';
     public $timestamps = false;
     protected $fillable = [
-        'vards', 'uzvards', 'password',
+        'vards', 'uzvards', 'username', 'password',
     ];
    
 

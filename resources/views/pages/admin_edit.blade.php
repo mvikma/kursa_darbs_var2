@@ -12,6 +12,10 @@
         <input type="text" class="form-control" name="uzvards" id="uzvards" value="{{$data['uzvards']}}">
     </div>
     <div class="form-group">
+      <label for="username">Uzvards:</label>
+      <input type="text" class="form-control" name="username" id="username" value="{{$data['username']}}">
+  </div>
+    <div class="form-group">
         <label for="nosaukums">Parole:</label>
         <input type="password" class="form-control" name="password" id="password" value="{{$data['password']}}">
     </div>

@@ -1,10 +1,9 @@
 <?php
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
-use Hash;
-use Session;
-use App\Models\Admin;
-use Illuminate\Support\Facades\Auth;
+use Auth;
+use Validator;
+
 class AuthController extends Controller
 {
     public function index()
@@ -14,18 +13,22 @@ class AuthController extends Controller
       
     public function customLogin(Request $request)
     {
-        $request->validate([
-            'vards' => 'required',
-            'uzvards' => 'required',
+        $this->validate([
+            'username' => 'required',
             'parole' => 'required',
         ]);
-   
-        $credentials = $request->only('vards', 'uzvards', 'parole');
-        if (Auth::attempt($credentials)) {
-            return redirect()->intended('');
+        $user_data = array(
+            'username' => $request->get('username'),
+            'password' => $request->get('password')
+        )
+        if(Auth::attempt($user_data))
+        {
+            return redirect('');
         }
-  
-        return redirect("login")->withSuccess('Nepareizi ievadīti dati.');
+        else
+        {
+            return back()->with('error', 'Nepareizi ievadīti dati');
+        }
     }
     
     public function dashboard()

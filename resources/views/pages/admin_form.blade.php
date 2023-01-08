@@ -14,6 +14,10 @@
         <input type="text" class="form-control" name="uzvards" id="uzvards">
     </div>
     <div class="form-group">
+      <label for="username">Lietotājvards:</label>
+      <input type="text" class="form-control" name="username" id="username">
+  </div>
+    <div class="form-group">
         <label for="nosaukums">Parole:</label>
         <input type="password" class="form-control" name="password" id="password">
     </div>
