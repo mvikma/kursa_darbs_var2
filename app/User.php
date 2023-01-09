@@ -9,23 +9,15 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 class User extends Authenticatable
 {
     use Notifiable;
-/**
-     * The database table used by the model.
-     *
-     * @var string
-     */
-    //protected $table = 'admins'; 
+
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
-    protected $primaryKey = 'admin_id';
-    public $timestamps = false;
     protected $fillable = [
-        'vards', 'uzvards', 'username', 'password',
+        'name', 'email', 'password',
     ];
-   
 
     /**
      * The attributes that should be hidden for arrays.
@@ -42,6 +34,6 @@ class User extends Authenticatable
      * @var array
      */
     protected $casts = [
-        //'email_verified_at' => 'datetime',
+        'email_verified_at' => 'datetime',
     ];
 }

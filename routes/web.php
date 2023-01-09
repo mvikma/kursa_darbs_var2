@@ -8,6 +8,8 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\ZinaController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AuthController;
+use Illuminate\Foundation\Auth\RegistersUsers;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -44,29 +46,28 @@ Route::get('/product_edit', 'PagesController@product_edit');
 
 Route::get('/shop', 'ProductController@shop');
 Route::get("details/{id}",'ProductController@details');
-Route::get("delete/{id}",'ProductController@delete');
+Route::get("delete/product/{id}",'ProductController@delete');
 Route::get("product_edit/{id}",'ProductController@edit');
 
 Route::get('/blog', 'BlogController@blog');
-Route::get("delete/{Bloga_ID}",'BlogController@delete');
+Route::get("delete/blog/{Bloga_ID}",'BlogController@delete');
 Route::get("blog_edit/{Bloga_ID}",'BlogController@edit');
 
 Route::get('/admin', 'UserController@admin');
-Route::get("delete/admin/{admin_id}",'UserController@delete');
-Route::get("admin_edit/{admin_id}",'UserController@edit');
+Route::get("delete/admin/{id}",'UserController@delete');
+Route::get("admin_edit/{id}",'UserController@edit');
 
 
 Route::post('blog_form', 'BlogController@store');
 Route::post('product_form', 'ProductController@store');
-Route::post('admin_form', 'UserController@store');
+//Route::post('admin_form', 'RegisterController@store');
 Route::post('footer', 'ZinaController@store');
-Route::post('blog_update', 'BlogController@update');
-Route::post('product_update', 'ProductController@update');
+Route::post('blog_update/{Bloga_ID}', 'BlogController@update');
+Route::post('product_update/{id}', 'ProductController@update');
 Route::post('admin_update', 'UserController@update');
-Auth::routes();
 //Route::post('login', 'AuthController@customLogin');
 //Route::get('/home', 'HomeController@index');
 //Route::get('signout', 'AuthController@signOut');
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+//Route::get('/home', 'HomeController@index')->name('home');

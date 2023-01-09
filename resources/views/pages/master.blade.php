@@ -83,5 +83,73 @@
   padding: 5px;
   width: 150px;
   }
+  .detail-img{
+    height: 400px;
+    width: 400px;
+  }
+  .user_card{
+    display:flex;
+    justify-content:center;
+  }
+  .admin_edit_form{
+    width: 600px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  #admin_edit_btn{
+    display:flex;
+    justify-content:center;
+    margin-left: 225px;
+  }
+  .pro_form{
+    width: 600px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  #pro_form_btn{
+    display:flex;
+    justify-content:center;
+    margin-left: 225px;
+  }
+  .pro_edit{
+    width: 600px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  #pro_edit_btn{
+    display:flex;
+    justify-content:center;
+    margin-left: 225px;
+  }
+  .blg_form{
+    width: 600px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  #blg_form_btn{
+    display:flex;
+    justify-content:center;
+    margin-left: 225px;
+  }
+  .blg_edit{
+    width: 600px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  #blg_edit_btn{
+    display:flex;
+    justify-content:center;
+    margin-left: 225px;
+  }
 </style>
 </html>

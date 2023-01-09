@@ -7,13 +7,13 @@
         <ol class="breadcrumb">
             <li><a href="/">Home</a></li>
             <li><a href="/shop">Veikals</a></li>
-            <li class="active">{{$product['title']}}</li>
+            <li class="active">{{$product['nosaukums']}}</li>
           </ol>
     </div>
 </div><!--end breadcrumbs -->
 <div class="details-container">
     <div class="col-sm-6">
-        <img class="detail-img" src="images/{{$product['galerija']}}" alt="">
+        <img class="detail-img" src="/images/{{$product['galerija']}}" alt="">
         </div>
         <div class="col-sm-6">
             <a href="/shop">Go Back</a>
@@ -21,7 +21,7 @@
             @else
             <div class="row">
                 <div class="col-sm-12 text-center">
-                    <a href="/delete/{{$product['id']}}"><button type="button" class="btn btn-primary">Dzēst Produktu</button></a>
+                    <a href="/delete/product/{{$product['id']}}"><button type="button" class="btn btn-primary">Dzēst Produktu</button></a>
                     <a href="/product_edit/{{$product['id']}}"><button type="button" class="btn btn-primary">Rediģēt Produktu</button></a>
                 </div>
             </div>

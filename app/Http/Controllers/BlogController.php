@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Blog;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Auth;
 
 
 class BlogController extends Controller
@@ -29,15 +30,15 @@ class BlogController extends Controller
         $blog->nosaukums = $request->nosaukums;
         $blog->galerija = $request->galerija;
         $blog->apraksts = $request->apraksts;
-        $data->autora_id = auth()->admins()->admin_id;
+        $blog->autora_id = Auth::user()->id;
         $blog->save();
 
         return redirect('blog');
                         // ->with('success', 'Blogs veiksmīgi izveidots.');
     }
-    function delete($Blog_ID)
+    function delete($Bloga_ID)
     {
-        $data= Admin::find($Blog_ID);
+        $data= Blog::find($Bloga_ID);
         $data->delete();
         return redirect('blog');
     }
@@ -46,13 +47,13 @@ class BlogController extends Controller
         $data= Blog::find($Blog_ID);
         return view('pages.blog_edit',['data'=>$data]);
     }
-    function update(Request $request)
+    function update(Request $request,$Bloga_ID)
     {
-        $data=Blog::find($request->Blof_ID);
+        $data=Blog::find($Bloga_ID);
         $data->nosaukums = $request->nosaukums;
         $data->galerija = $request->galerija;
         $data->apraksts = $request->apraksts;
-        $data->autora_id = auth()->admins()->admin_id;
+        $data->autora_id = Auth::user()->id;
         $data->save();
         return redirect('blog');
     }

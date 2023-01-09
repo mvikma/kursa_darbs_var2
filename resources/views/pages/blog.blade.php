@@ -25,7 +25,7 @@
                                     @guest
                                     @else
                                     <div class="col-sm-12 text-center">
-                                        <a href="delete/{{$item['Bloga_ID']}}"><button type="button" class="btn btn-primary">Dzēst Blogu</button></a>
+                                        <a href="delete/blog/{{$item['Bloga_ID']}}"><button type="button" class="btn btn-primary">Dzēst Blogu</button></a>
                                         <a href="/blog_edit/{{$item['Bloga_ID']}}"><button type="button" class="btn btn-primary">Rediģēt Blogu</button></a>
                                     </div>
                                     @endguest

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Product;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Auth;
 
 
 class ProductController extends Controller
@@ -39,7 +40,7 @@ class ProductController extends Controller
         $product->kategorija = $request->kategorija;
         $product->galerija = $request->galerija;
         $product->apraksts = $request->apraksts;
-        $data->autora_id = auth()->admins()->admin_id;
+        $product->autora_id = Auth::user()->id;;
         $product->save();
 
         return redirect('shop');
@@ -56,15 +57,15 @@ class ProductController extends Controller
         $data= Product::find($id);
         return view('pages.product_edit',['data'=>$data]);
     }
-    function update(Request $request)
+    function update(Request $request, $id)
     {
-        $data=Product::find($request->id);
+        $data=Product::find($id);
         $data->nosaukums = $request->nosaukums;
         $data->cena = $request->cena;
         $data->kategorija = $request->kategorija;
         $data->galerija = $request->galerija;
         $data->apraksts = $request->apraksts;
-        $data->autora_id = auth()->admins()->admin_id;
+        $data->autora_id = Auth::user()->id;
         $data->save();
         return redirect('shop');
     }

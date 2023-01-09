@@ -1,27 +1,29 @@
 @extends('pages.master')
 @section('content')
-<form method="POST" action="/product_update">
+<div class="pro_edit">
+<form method="POST" action="/product_update/{{$data->id}}">
     @csrf
     <div class="form-group">
       <label for="nosaukums">Nosaukums:</label>
-      <input type="text" class="form-control" name="nosaukums" id="nosaukums">
+      <input type="text" class="form-control" name="nosaukums" id="nosaukums" value="{{$data->nosaukums}}" oninvalid="this.setCustomValidity('Jaaizpilda lauks')" onchange="this.setCustomValidity('')">
     </div>
     <div class="form-group">
         <label for="cena">Cena:</label>
-        <input type="text" class="form-control" name="cena" id="cena">
+        <input type="text" class="form-control" name="cena" id="cena" value="{{$data->cena}}" oninvalid="this.setCustomValidity('Jaaizpilda lauks')" onchange="this.setCustomValidity('')">
       </div>
       <div class="form-group">
         <label for="kategorija">Kategorija:</label>
-        <input type="text" class="form-control" name="kategorija" id="kategorija">
+        <input type="text" class="form-control" name="kategorija" id="kategorija" value="{{$data->kategorija}}" oninvalid="this.setCustomValidity('Jaaizpilda lauks')" onchange="this.setCustomValidity('')">
       </div>
     <div class="form-group">
       <label for="galerija">Galerija:</label>
-      <input type="text" class="form-control" name="galerija" id="galerija">
+      <input type="text" class="form-control" name="galerija" id="galerija" value="{{$data->galerija}}" oninvalid="this.setCustomValidity('Jaaizpilda lauks')" onchange="this.setCustomValidity('')">
     </div>
     <div class="form-group">
         <label for="apraksts">Apraksts:</label>
-        <textarea class="form-control" name="apraksts" id="apraksts"></textarea>
+        <input type="text" class="form-control" name="apraksts" id="apraksts" value="{{$data->apraksts}}" oninvalid="this.setCustomValidity('Jaaizpilda lauks')" onchange="this.setCustomValidity('')">
       </div>
-    <button type="submit" class="btn btn-primary">Saglabāt</button>
+    <button type="submit" id="pro_edit_btn" class="btn btn-primary">Saglabāt</button>
   </form>
+</div>
   @endsection

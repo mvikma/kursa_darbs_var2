@@ -7,8 +7,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Product extends Model
 {
+    protected $primaryKey = 'id';
     public $timestamps = false;
     protected $fillable = [
-        'nosaukums', 'cena', 'kategorija', 'apraksts', 'galerija',
+        'nosaukums', 'cena', 'kategorija', 'galerija', 'apraksts',
     ];
 }

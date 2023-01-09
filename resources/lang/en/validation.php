@@ -129,8 +129,8 @@ return [
     */
 
     'custom' => [
-        'attribute-name' => [
-            'rule-name' => 'custom-message',
+        'name', 'email', 'password', 'nosaukums', 'cena', 'apraksts', 'kategorija', 'galerija' => [
+            'required' => 'Jaaizpilda visi lauki',
         ],
     ],
 

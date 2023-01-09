@@ -36,9 +36,6 @@ class PagesController extends Controller
     public function admin(){
         return view('pages.admin');
     } 
-    public function login(){
-        return view('pages.login');
-    }
     public function product_form(){
         return view('pages.product_form');
     }
@@ -46,7 +43,7 @@ class PagesController extends Controller
         return view('pages.blog_form');
     }
     public function admin_form(){
-        return view('pages.admin_form');
+        return view('auth.register');
     }
     public function admin_edit(){
         return view('pages.admin_edit');
@@ -57,4 +54,5 @@ class PagesController extends Controller
     public function product_edit(){
         return view('pages.product_edit');
     }
+    
 }
