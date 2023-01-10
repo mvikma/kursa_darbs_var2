@@ -8,9 +8,6 @@
     <div class="row">
     <!--Grid column-->
         <div class="col-md-9 mb-md-0 mb-5">
-            @if($errors->any())
-<span style="color:red font">Jaaizpilda visi lauki</span>
-@endif
             <form id="contact-form" name="contact-form" action="/footer" method="POST">
                 @csrf
                 <!--Grid row-->
@@ -18,7 +15,7 @@
                     <!--Grid column-->
                     <div class="col-md-6">
                         <div class="md-form mb-0">
-                            <input type="text" id="vards" name="vards" class="form-control" required>
+                            <input type="text" id="vards" name="vards" class="form-control" required oninvalid="this.setCustomValidity('Jaaizpilda lauks')" onchange="this.setCustomValidity('')">
                             <label for="vards" class="">Vārds</label>
                         </div>
                     </div>
@@ -26,7 +23,7 @@
                     <!--Grid column-->
                     <div class="col-md-6">
                         <div class="md-form mb-0">
-                            <input type="text" id="e_pasts" name="e_pasts" class="form-control" required>
+                            <input type="text" id="e_pasts" name="e_pasts" class="form-control" required oninvalid="this.setCustomValidity('Jaaizpilda lauks')" onchange="this.setCustomValidity('')">
                             <label for="e_pasts" class="">E-pasts</label>
                         </div>
                     </div>
@@ -37,7 +34,7 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="md-form mb-0">
-                            <input type="text" id="tema" name="tema" class="form-control" required>
+                            <input type="text" id="tema" name="tema" class="form-control" required oninvalid="this.setCustomValidity('Jaaizpilda lauks')" onchange="this.setCustomValidity('')">
                             <label for="tema" class="">Tēma</label>
                         </div>
                     </div>
@@ -48,7 +45,7 @@
                     <!--Grid column-->
                     <div class="col-md-12">
                         <div class="md-form">
-                            <textarea type="text" id="zina" name="zina" rows="2" class="form-control md-textarea"></textarea>
+                            <input type="text" id="zina" name="zina" class="form-control" required oninvalid="this.setCustomValidity('Jaaizpilda lauks')" onchange="this.setCustomValidity('')">
                             <label for="zina">Jūsu ziņa</label>
                         </div>
                     </div>

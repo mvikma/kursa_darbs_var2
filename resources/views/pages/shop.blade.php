@@ -14,12 +14,6 @@
 
 <div class="products-section container">
     <div class="sidebar">
-        <h3>Pēc Kategorijas</h3>
-        <ul class="nav nav-pills text-left">
-            <li role="presentation" class="active"><a href="/berry">Ogas</a></li>
-            <li role="presentation"><a href="/juice">Sulas</a></li>
-            <li role="presentation"><a href="/candy">Sukādes</a></li>
-          </ul>
           @guest
             @else
           <ul class="text-right">

@@ -5,7 +5,8 @@
     <div class="row">
         <div class="col-md-12 text-center">
             <div class="user_card">
-                <div class="card-body">
+                <div class="table-responsive">
+                  <div class="card-body">
                     <h5 class="card-title text-uppercase mb-0">Admini</h5>
                 </div>
                 @if (Route::has('register'))
@@ -13,7 +14,6 @@
                     <p><a href="/admin_form" class="btn btn-primary" role="button">Pievienot Admin</a></p>
                 </ul>
                 @endif
-                <div class="table-responsive">
                     <table class="table no-wrap user-table mb-0">
                       <thead>
                         <tr>

@@ -151,5 +151,9 @@
     justify-content:center;
     margin-left: 225px;
   }
+  .thumbnail{
+    width: 323px;
+    height: 417px;
+  }
 </style>
 </html>

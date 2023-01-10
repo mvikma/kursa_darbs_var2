@@ -26,7 +26,7 @@
         <div class="col-sm-6 col-md-4">
           <a href="details/5">
           <div class="thumbnail">
-            <img src="pro_oga1.jpg" alt="...">
+            <img src="images/pro_oga1.jpg" alt="...">
             <div class="caption">
               <h3>Saldēti Smiltsērkšķi</h3>
               <p>Cena atkarīga no daudzuma, lūdzu sazinieties ar mums par šo.</p>
@@ -38,7 +38,7 @@
         <div class="col-sm-6 col-md-4">
           <a href="details/6">
           <div class="thumbnail">
-            <img src="pro_oga2.jpg" alt="...">
+            <img src="images/pro_oga2.jpg" alt="...">
             <div class="caption">
               <h3>Saldētas Cidonijas</h3>
               <p>Cena atkarīga no daudzuma, lūdzu sazinieties ar mums par šo.</p>
