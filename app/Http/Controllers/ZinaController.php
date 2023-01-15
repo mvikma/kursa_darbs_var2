@@ -26,9 +26,8 @@ class ZinaController extends Controller
         $zina->tema = $request->tema;
         $zina->zina = $request->zina;
         $zina->save();
-
+        
+        //nosūta atpakaļ uz sākuma lapu
         return redirect('');
-                         //->with('success', 'Produkts veiksmīgi izveidots.');
-    }
-    
+    }    
 }

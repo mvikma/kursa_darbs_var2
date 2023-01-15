@@ -57,17 +57,10 @@ Route::get('/admin', 'UserController@admin');
 Route::get("delete/admin/{id}",'UserController@delete');
 Route::get("admin_edit/{id}",'UserController@edit');
 
-
 Route::post('blog_form', 'BlogController@store');
 Route::post('product_form', 'ProductController@store');
-//Route::post('admin_form', 'RegisterController@store');
 Route::post('footer', 'ZinaController@store');
 Route::post('blog_update/{Bloga_ID}', 'BlogController@update');
 Route::post('product_update/{id}', 'ProductController@update');
 Route::post('admin_update', 'UserController@update');
-//Route::post('login', 'AuthController@customLogin');
-//Route::get('/home', 'HomeController@index');
-//Route::get('signout', 'AuthController@signOut');
 Auth::routes();
-
-//Route::get('/home', 'HomeController@index')->name('home');

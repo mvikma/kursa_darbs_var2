@@ -10,18 +10,21 @@ use Illuminate\Support\Facades\Auth;
 
 class ProductController extends Controller
 {
-    //
+    // nosūta uz saiti datus no db
     function shop()
     {
         $data= Product::all();
 
        return view('pages.shop',['products'=>$data]);
     }
+    
+    //nosūta uz saiti konkrēta produkta datus
     function details($id)
     {
         $data =Product::find($id);
         return view('pages.details',['product'=>$data]);
     }
+    
     public function store(Request $request)
     {
         // Validācija vai lauki ir aizpildīti
@@ -44,19 +47,24 @@ class ProductController extends Controller
         $product->save();
 
         return redirect('shop');
-                         //->with('success', 'Produkts veiksmīgi izveidots.');
     }
+    
+    //dzēš produktu
     function delete($id)
     {
         $data= Product::find($id);
         $data->delete();
         return redirect('shop');
     }
+    
+    //nosūta rediģējamā produkta datus uz form
     function edit($id)
     {
         $data= Product::find($id);
         return view('pages.product_edit',['data'=>$data]);
     }
+    
+    //saglabā izmaiņas
     function update(Request $request, $id)
     {
         $data=Product::find($id);

@@ -10,12 +10,14 @@ use Illuminate\Support\Facades\Auth;
 
 class BlogController extends Controller
 {
+    //Paņem datus no datubāzes
     function blog()
     {
         $data= Blog::all();
 
        return view('pages.blog',['blog'=>$data]);
     }
+    
     public function store(Request $request)
     {
         // Validācija vai lauki ir aizpildīti
@@ -34,19 +36,24 @@ class BlogController extends Controller
         $blog->save();
 
         return redirect('blog');
-                        // ->with('success', 'Blogs veiksmīgi izveidots.');
     }
+    
+    //dzēš blogu
     function delete($Bloga_ID)
     {
         $data= Blog::find($Bloga_ID);
         $data->delete();
         return redirect('blog');
     }
+    
+    //nosūta uz edit form datus kādi tagad ir db
     function edit($Blog_ID)
     {
         $data= Blog::find($Blog_ID);
         return view('pages.blog_edit',['data'=>$data]);
     }
+    
+    //saglabā rediģētos datus
     function update(Request $request,$Bloga_ID)
     {
         $data=Blog::find($Bloga_ID);

@@ -1,9 +1,6 @@
 @extends('pages.master')
 @section('content')
-@if($errors->any())
-<span style="color:red font">Jaaizpilda visi lauki.</span>
-@endif
-<form method="POST" action="/admin_form">
+  <form method="POST" action="/admin_form">
     @csrf
     <div class="form-group">
       <label for="vards">Vards:</label>
@@ -16,10 +13,10 @@
     <div class="form-group">
       <label for="username">Lietotājvards:</label>
       <input type="text" class="form-control" name="username" id="username">
-  </div>
+    </div>
     <div class="form-group">
-        <label for="nosaukums">Parole:</label>
-        <input type="password" class="form-control" name="password" id="password">
+      <label for="nosaukums">Parole:</label>
+      <input type="password" class="form-control" name="password" id="password">
     </div>
     <button type="submit" class="btn btn-primary">Saglabāt</button>
   </form>

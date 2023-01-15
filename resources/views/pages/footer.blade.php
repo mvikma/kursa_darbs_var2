@@ -53,28 +53,26 @@
                 <div class="text-center text-md-left">
                     <button type="submit" class="btn btn-primary">Sūtīt</button>
                 </div>
-                <!--Grid row-->
-            
-            
-            <div class="status"></div>
+                <!--Grid row-->                        
+                <div class="status"></div>
+            </div>
+            <!--Grid column-->
+            <!--Grid column-->
+            <div class="col-md-3 text-center">
+                <ul class="list-unstyled mb-0">
+                    <li><i class="fas fa-map-marker-alt fa-2x"></i>
+                        <p>Ragana, Latvia</p>
+                    </li>
+                    <li><i class="fas fa-phone mt-4 fa-2x"></i>
+                        <p>+37126139700</p>
+                    </li>
+                    <li><i class="fas fa-envelope mt-4 fa-2x"></i>
+                        <p>info@balticberry.com</p>
+                    </li>
+                </ul>
+            </div>
+            <!--Grid column-->
         </div>
-        <!--Grid column-->
-        <!--Grid column-->
-        <div class="col-md-3 text-center">
-            <ul class="list-unstyled mb-0">
-                <li><i class="fas fa-map-marker-alt fa-2x"></i>
-                    <p>Ragana, Latvia</p>
-                </li>
-                <li><i class="fas fa-phone mt-4 fa-2x"></i>
-                    <p>+37126139700</p>
-                </li>
-                <li><i class="fas fa-envelope mt-4 fa-2x"></i>
-                    <p>info@balticberry.com</p>
-                </li>
-            </ul>
-        </div>
-        <!--Grid column-->
     </div>
-</div>
 </section>
 <!--Section: Contact v.2-->
